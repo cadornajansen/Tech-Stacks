@@ -61,7 +61,7 @@ const Add = () => {
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
-        description: error,
+        description: `${error}`,
       });
     }
     toast({

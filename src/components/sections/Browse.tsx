@@ -49,13 +49,13 @@ const Browse = () => {
         ) : (
           technologies
             ?.filter(
-              (item) =>
+              (item: { title: string, tags: string[] }) =>
                 item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 item.tags.some((tag: string) =>
                   tag.toLowerCase().includes(searchQuery.toLowerCase())
                 )
             )
-            .map((item) => (
+            .map((item: { id: string, image: string, title: string, description: string, about: string, tags: string[] }) => (
               <Card key={item.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
